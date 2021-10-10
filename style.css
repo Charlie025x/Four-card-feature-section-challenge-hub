@@ -1,5 +1,33 @@
 body {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em;
+}
+
+header {
+  background-color: gray;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+  max-width: 472px;
+}
+
+header h1 {
+  margin-bottom: 0.5em;
+  font-weight: 300;
+}
+
+.card-container {
+  background-color: rgb(164, 161, 172);
+}
+
+.card {
+  background-color: rgb(97, 107, 126);
+}
+
+footer {
+  background-color: pink;
 }
 
 .attribution {
