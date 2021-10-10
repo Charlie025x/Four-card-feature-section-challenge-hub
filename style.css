@@ -1,16 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+:root {
+  --clr-red: hsl(0, 78%, 62%);
+  --clr-cyan: hsl(180, 62%, 55%);
+  --clr-orange: hsl(34, 97%, 64%);
+  --clr-blue: hsl(212, 86%, 64%);
+  --clr-darkblue: hsl(234, 12%, 34%);
+  --clr-grayishblue: hsl(229, 6%, 66%);
+  --clr-lightgray: hsl(0, 0%, 98%);
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 1em;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--clr-lightgray);
+  color: var(--clr-darkblue);
 }
 
 header {
-  background-color: gray;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
   text-align: center;
-  max-width: 472px;
+  max-width: 510px;
 }
 header h1 {
   margin-bottom: 0.5em;
@@ -18,22 +32,32 @@ header h1 {
 }
 
 .card-container {
-  background-color: #a4a1ac;
+  margin-top: 2em;
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 2em;
+  grid-template-rows: repeat(4, 300px);
 }
 
 .card {
-  background-color: #616b7e;
+  background-color: var(--clr-lightgray);
+  padding: 2em;
+  border-radius: 1em;
+  filter: drop-shadow(0px 10px 10px var(--clr-grayishblue));
+}
+.card h2 {
+  margin-bottom: 0.2em;
 }
 
 footer {
   background-color: pink;
+  margin-top: 3em;
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
 }
-
 .attribution a {
   color: #3e52a3;
 }
