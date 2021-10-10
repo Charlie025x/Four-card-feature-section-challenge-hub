@@ -11,18 +11,18 @@ header {
   padding-bottom: 1em;
   text-align: center;
   max-width: 472px;
-}
-header h1 {
-  margin-bottom: 0.5em;
-  font-weight: 300;
+  h1 {
+    margin-bottom: 0.5em;
+    font-weight: 300;
+  }
 }
 
 .card-container {
-  background-color: #a4a1ac;
+  background-color: rgb(164, 161, 172);
 }
 
 .card {
-  background-color: #616b7e;
+  background-color: rgb(97, 107, 126);
 }
 
 footer {
@@ -33,9 +33,6 @@ footer {
   font-size: 11px;
   text-align: center;
 }
-
 .attribution a {
-  color: #3e52a3;
+  color: hsl(228, 45%, 44%);
 }
-
-/*# sourceMappingURL=style.css.map */
