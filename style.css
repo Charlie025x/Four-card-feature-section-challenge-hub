@@ -68,7 +68,6 @@ header h1 {
   height: 4.5em;
   display: block;
   position: absolute;
-  border-color: green;
   bottom: 2em;
   right: 2em;
   background-image: url(./images/icon-supervisor.svg);
