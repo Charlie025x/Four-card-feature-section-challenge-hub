@@ -14,7 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1em;
+  margin: 1.5em;
   font-size: 15px;
   font-family: "Poppins", sans-serif;
   background-color: gray;
@@ -25,7 +25,7 @@ body {
 header {
   // background-color: gray;
   padding-top: 2em;
-  padding-bottom: 2em;
+  padding-bottom: 3em;
   text-align: center;
   max-width: 510px;
   h1 {
@@ -40,7 +40,7 @@ header {
   display: grid;
   grid-auto-flow: row;
   grid-gap: 2em;
-  grid-template-rows: repeat(4, 300px);
+  grid-template-rows: repeat(4, 16.5em);
 }
 
 .card {
@@ -48,13 +48,65 @@ header {
   padding: 2em;
   border-radius: 1em;
   filter: drop-shadow(0px 10px 10px var(--clr-grayishblue));
+  position: relative;
+  overflow: hidden;
   h2 {
     margin-bottom: 0.2em;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 0.4em; /* should be .card's border-radius x 4 */
+      top: 0;
+      left: 0;
+      background-color: red;
+    }
+  }
+  p::after {
+    content: "";
+    width: 4.5em;
+    height: 4.5em;
+    display: block;
+    position: absolute;
+    border-color: green;
+    bottom: 0 + 2em; //2m makes image line up with cards padding
+    right: 0 + 2em; //2m to make image line up with cards padding
+    background-image: url(./images/icon-supervisor.svg);
+    background-repeat: no-repeat;
+  }
+  &:nth-of-type(1) {
+    h2::before {
+      background-color: var(--clr-cyan);
+    }
+  }
+  &:nth-of-type(2) {
+    h2::before {
+      background-color: var(--clr-red);
+    }
+    p::after {
+      background-image: url(./images/icon-team-builder.svg);
+    }
+  }
+  &:nth-of-type(3) {
+    h2::before {
+      background-color: var(--clr-orange);
+    }
+    p::after {
+      background-image: url(./images/icon-karma.svg);
+    }
+  }
+  &:nth-of-type(4) {
+    h2::before {
+      background-color: var(--clr-blue);
+    }
+    p::after {
+      background-image: url(./images/icon-calculator.svg);
+    }
   }
 }
 
 footer {
-  background-color: pink;
   margin-top: 3em;
 }
 
